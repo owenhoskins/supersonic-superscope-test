@@ -1,0 +1,29 @@
+<div ng-controller="IndexController">
+  <super-navbar>
+    <super-navbar-title>
+      Beer Index
+    </super-navbar-title>
+  </super-navbar>
+
+  <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
+  <div ng-hide="showSpinner">
+  <button class="button button-block button-assertive" ng-click="setSuperscopeVar()">
+    Set "superscopeVar"
+  </button>
+
+  <span class="item" ng-bind="superscopeVar"></span>
+  
+  <super-navigate location="beer#show">
+    <button class="button button-assertive">
+      Go to Show View
+    </button>
+  </super-navigate>
+
+<!-- 
+  <super-modal-show location="beer#new">
+    <button class="button button-full button-positive">
+      Create a new beer
+    </button>
+  </super-modal-show> -->
+  </div>
+</div>
